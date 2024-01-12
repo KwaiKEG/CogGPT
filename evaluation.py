@@ -26,10 +26,10 @@ def calculate_average_authenticity(file_path, method):
     kappa_iteration_10 = authenticity_avg_per_iteration.get(10, "No data for 10th iteration")
 
     print(f'======= {method} Authenticity =======')
-    # print(f'0th iteration kappa: {rationality_avg_per_iteration[0]}')
-    print(f'Average kappa: {average_kappa}')
-    print(f'5th iteration kappa: {kappa_iteration_5}')
-    print(f'10th iteration kappa: {kappa_iteration_10}')
+    # print(f'0th iteration authenticity: {rationality_avg_per_iteration[0]}')
+    print(f'Average authenticity: {average_kappa}')
+    print(f'5th iteration authenticity: {kappa_iteration_5}')
+    print(f'10th iteration authenticity: {kappa_iteration_10}')
 
     return authenticity_avg_per_iteration
 
@@ -47,7 +47,7 @@ def calculate_average_rationality(file_path, method):
     rationality_iteration_10 = rationality_avg_per_iteration.get(10, "No data for 10th iteration")
 
     print(f'======= {method} Rationality =======')
-    # print(f'0th iteration kappa: {rationality_avg_per_iteration[0]}')
+    # print(f'0th iteration rationality: {rationality_avg_per_iteration[0]}')
     print(f'Average rationality: {average_rationality}')
     print(f'5th iteration rationality: {rationality_iteration_5}')
     print(f'10th iteration rationality: {rationality_iteration_10}')

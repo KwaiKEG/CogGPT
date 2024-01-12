@@ -3,39 +3,71 @@
 </p>
 <br><br>
 
-<p align="center">
-      📚 CogBench (upcoming) | 📑 Paper (upcoming)
-<br>
+论文 "<a href="CogGPT_Unleashing_the_Power_of_Cognitive_Dynamics_on_Large_Language_Models.pdf"> CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models </a>" 相关代码和数据
 
-CogGPT 是[快手快知团队](https://github.com/KwaiKEG)开源的一整套Agent系列工作。开源的内容包括
+## CogBench
 
-1. **CogBench**: 一个专门用于评估LLMs的认知动态的基准测试。
-2. **CogGPT**: 一个具有迭代认知机制的LLM-driven agent。 
-<br>
+**<a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a>** 是一个专门用于评估大型语言模型的认知动态（the cognitive dynamics of LLMs）的基准测试，支持中文和英文两种语言。根据信息流的类型，CogBench 分为两个部分：针对文章流的 CogBench<sub>a</sub> 和针对短视频流的 CogBench<sub>v</sub>。
 
-## 什么是认知动态
+在这个基准测试中，LLM和人类被赋予相同的初始人设，在10轮迭代中接收相同的信息流。每接收完一轮迭代的信息流，他们需要填写同一份认知问卷。这份问卷使用 Likert 五点量表，通过参与者的评分来展示其对当前问题的态度。
 
-下图为人类认知动态的一个示例。一个人（左侧）的宇宙观随着动态信息流（右侧）的影响而发生持续性的转变。
-<p align="center">
-    <img src="blob/example.png"/>
-<p>
+CogBench 旨在评估 LLM 与人类在认知一致性方面的表现。评估指标包括：
 
-<br>
+1. **真实性（Authenticity）**：衡量 LLM 与人类评分的一致性。
+2. **合理性（Rationality）**：评估 LLM 提出评分理由的合理性。
 
 ## CogGPT
 
+**CogGPT** 是一个基于大型语言模型（LLM）的智能体，旨在展现LLM的认知动态特性。面对不断变化的信息流，CogGPT 能够定期更新其人设，并根据自身兴趣将知识结构化地存储在长期记忆中。这一独特的能力使得CogGPT能够维持基于特定角色的认知动态，进而实现终生学习。
+
+<br>
+
 <p align="center">
-    <img src="blob/model.png"/>
+    <img src="blob/model.png" alt="CogGPT"/>
 <p>
 
 ## 动态
+
+* 2024.01.12 - <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a> 公开
 * 2024.01.05 - 项目公开
 
 ## 使用指南
 
+### 设置
+
+按照以下步骤来配置 CogBench:
+
+1. **克隆仓库**：在本地环境中克隆此仓库。
+2. **切换目录**：使用 `cd` 命令进入仓库目录。
+3. **下载数据**：下载 <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a> 数据集，并将其保存在 `dataset` 目录下。
+4. **运行实验**：基于 `cogbench_a.json` 和 `cogbench_v.json`，分别在 CogBench<sub>a</sub> 和 CogBench<sub>v</sub> 上运行你的方法，并获取实验结果。
+5. **评估结果**：将基于 CogBench<sub>a</sub> 和 CogBench<sub>v</sub> 的实验结果分别填入 `eval_cogbench_a.json` 和 `eval_cogbench_v.json` 文件中，以便进行评估。
+
 ### 评价
+
+为了评估您的方法基于真实性（Authenticity）和合理性（Rationality）两个指标的表现，我们建议运行以下命令：
+
 ```bash
-git clone git@github.com:KwaiKEG/CogGPT.git
-cd CogGPT
-python evaluation.py --file_path datasets/english/eval_cogbench_v.json --authenticity --rationality
+python evaluation.py --file_path <YOUR_FILE_PATH> --method <YOUR_METHOD_NAME> --authenticity --rationality
 ```
+
+例如，要在 CogBench<sub>v</sub> 上评估 `CoT` 方法，请执行：
+
+```bash
+python evaluation.py --file_path dataset/english/eval_cogbench_v.json --method CoT --authenticity --rationality
+```
+
+评估完成后，您将看到类似于下面的输出，展示了 `CoT` 方法在不同评价指标下的表现：
+
+```bash
+======= CoT Authenticity =======
+Average authenticity: 0.15277666156947955
+5th iteration authenticity: 0.3023255813953488
+10th iteration authenticity: 0.13135593220338992
+======= CoT Rationality =======
+Average rationality: 3.058333333333333
+5th iteration rationality: 3.7666666666666666
+10th iteration rationality: 3.0833333333333335
+```
+
+更多关于 CogBench 和其评价方法的详细信息，请访问 <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a> 。
