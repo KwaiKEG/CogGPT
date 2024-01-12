@@ -37,14 +37,9 @@ CogBench aims to assess the cognitive alignment between the LLM and the human. T
 
 Follow these steps to build CogBench:
 
-1.	Clone this repository locally.
-2.	cd into the cloned repository.
-3.	Download the CogBench dataset into the `dataset` folder.
-4.	Implement your experimental results in `eval_cogbench_a.json` for CogBench<sub>a</sub> and `eval_cogbench_v.json` for CogBench<sub>v</sub>.
-
 1. **Clone the Repository**: Clone this repository to your local environment.
 2. **Switch Directory**: Use the `cd` command to enter the repository directory.
-3. **Download Data**: Download the [CogBench dataset](https://huggingface.co/datasets/kwaikeg/CogBench) and save it in the `dataset` directory.
+3. **Download Data**: Download the [CogBench](https://huggingface.co/datasets/kwaikeg/CogBench) and save it in the `dataset` directory.
 4. **Run Experiments**: Implement your method using `cogbench_a.json` and `cogbench_v.json` for CogBench<sub>a</sub> and CogBench<sub>v</sub>, respectively, and record your experimental results.
 5. **Evaluate Results**: Fill in the `eval_cogbench_a.json` and `eval_cogbench_v.json` files with your experimental results for evaluations.
 
