@@ -3,7 +3,7 @@
 </p>
 <br><br>
 
-Code and data for the paper "<a href="CogGPT_Unleashing_the_Power_of_Cognitive_Dynamics_on_Large_Language_Models.pdf">CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models</a>".
+Code and data for the paper "<a href="https://arxiv.org/abs/2401.08438">CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models</a>".
 
 ## CogBench
 
@@ -28,6 +28,7 @@ CogBench aims to assess the cognitive alignment between the LLM and the human. T
 
 ## News
 
+* 2024.01.17 - [Paper](https://arxiv.org/abs/2401.08438) released.
 * 2024.01.12 - [CogBench](https://huggingface.co/datasets/kwaikeg/CogBench) released.
 * 2024.01.05 - Project initially released.
 

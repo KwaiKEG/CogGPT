@@ -3,7 +3,7 @@
 </p>
 <br><br>
 
-论文 "<a href="CogGPT_Unleashing_the_Power_of_Cognitive_Dynamics_on_Large_Language_Models.pdf"> CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models </a>" 相关代码和数据
+论文 "<a href="https://arxiv.org/abs/2401.08438"> CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models </a>" 相关代码和数据
 
 ## CogBench
 
@@ -28,6 +28,7 @@ CogBench 旨在评估 LLM 与人类在认知一致性方面的表现。评估指
 
 ## 动态
 
+* 2024.01.17 - [论文](https://arxiv.org/abs/2401.08438) released.
 * 2024.01.12 - <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a> 公开
 * 2024.01.05 - 项目公开
 
