@@ -28,8 +28,8 @@ CogBench 旨在评估 LLM 与人类在认知一致性方面的表现。评估指
 
 ## 动态
 
-* 2024.01.17 - [论文](https://arxiv.org/abs/2401.08438) released.
-* 2024.01.12 - <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a> 公开
+* 2024.01.17 - [论文](https://arxiv.org/abs/2401.08438)公开
+* 2024.01.12 - <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a>公开
 * 2024.01.05 - 项目公开
 
 ## 使用指南
