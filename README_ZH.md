@@ -72,3 +72,15 @@ Average rationality: 3.058333333333333
 ```
 
 更多关于 CogBench 和其评价方法的详细信息，请访问 <a href="https://huggingface.co/datasets/kwaikeg/CogBench">CogBench</a> 。
+
+## 引用
+```
+@misc{lv2024coggpt,
+      title={CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models}, 
+      author={Yaojia Lv and Haojie Pan and Ruiji Fu and Ming Liu and Zhongyuan Wang and Bing Qin},
+      year={2024},
+      eprint={2401.08438},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
