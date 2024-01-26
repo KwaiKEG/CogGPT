@@ -44,6 +44,20 @@ Follow these steps to build CogBench:
 4. **Run Experiments**: Implement your method using `cogbench_a.json` and `cogbench_v.json` for CogBench<sub>a</sub> and CogBench<sub>v</sub>, respectively, and record your experimental results.
 5. **Evaluate Results**: Fill in the `eval_cogbench_a.json` and `eval_cogbench_v.json` files with your experimental results for evaluations.
 
+### Using CogGPT
+
+1. Declare environment variables to use the GPT-4 API:
+
+```bash
+export OPENAI_API_KEY=sk-xxxxx
+```
+
+2. Run CogGPT with default settings:
+
+```bash
+python coggpt/agent.py
+```
+
 ### Evaluation
 
 To evaluate your method based on the authenticity and rationality metrics, we recommend running the following commands:

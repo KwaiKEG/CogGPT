@@ -40,3 +40,15 @@ def create_folder(path, folder_name):
 
 def find_ratings(s):
     return re.findall(r'\b[1-5]\b', s)
+
+
+def text_to_dict(text):
+    data_dict = {}
+    lines = text.split('\n')
+    
+    for line in lines:
+        if ': ' in line:
+            key, value = line.split(': ', 1)
+            data_dict[key.strip()] = value.strip()
+
+    return data_dict

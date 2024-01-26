@@ -44,6 +44,20 @@ CogBench 旨在评估 LLM 与人类在认知一致性方面的表现。评估指
 4. **运行实验**：基于 `cogbench_a.json` 和 `cogbench_v.json`，分别在 CogBench<sub>a</sub> 和 CogBench<sub>v</sub> 上运行你的方法，并获取实验结果。
 5. **评估结果**：将基于 CogBench<sub>a</sub> 和 CogBench<sub>v</sub> 的实验结果分别填入 `eval_cogbench_a.json` 和 `eval_cogbench_v.json` 文件中，以便进行评估。
 
+### 如何运行CogGPT
+
+1. 申明环境变量以使用GPT-4 API:
+
+```bash
+export OPENAI_API_KEY=sk-xxxxx
+```
+
+2. 运行默认设置下的CogGPT:
+
+```bash
+python coggpt/agent.py
+```
+
 ### 评价
 
 为了评估您的方法基于真实性（Authenticity）和合理性（Rationality）两个指标的表现，我们建议运行以下命令：
