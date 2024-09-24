@@ -1,3 +1,5 @@
+# [EMNLP 2024] CogGPT: Unleashing the Power of Cognitive Dynamics on Large Language Models
+
 <p align="left">
     English | <a href="README_ZH.md">中文</a>
 </p>
